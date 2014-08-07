@@ -1,0 +1,12 @@
+# Site settings
+title: RailsInMotion Blog - Adventures with Ruby on Rails
+email: info@fluffyjack.com
+description: "Polyglot programmer, but mainly a Rubyist. Web Designer/Developer, UX Designer. Creator of MotionInMotion, the RubyMotion screencast, and RailsInMotion, the Ruby on Rails screencast."
+baseurl: ""
+url: "http://blog.railsinmotion.com"
+twitter_username: FluffyJack
+github_username:  FluffyJack
+
+# Build settings
+markdown: redcarpet
+permalink: /:title
