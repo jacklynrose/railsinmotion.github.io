@@ -138,7 +138,7 @@ In your `app/views/articles/_form.html.erb` you need to enable multipart and add
   <!-- add this field -->
   <div class="field">
     <%= f.label :photo %><br>
-    <%= f.field_field :photo %>
+    <%= f.file_field :photo %>
   </div>
 
   <div class="actions">
