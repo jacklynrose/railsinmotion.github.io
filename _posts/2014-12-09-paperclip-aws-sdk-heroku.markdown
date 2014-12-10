@@ -243,7 +243,20 @@ export AWS_ACCESS_KEY_ID="XXXXXX"
 export AWS_SECRET_ACCESS_KEY="XXXXXXX"
 ```
 
-This will mean that you can copy the code we added to the `production.rb` file to the `development.rb` file too if you want to use S3 in your development environment locally.
+You also need to change the settings for your `development.rb` file a little too by adding the `path` and `url` options.
+
+```ruby
+config.paperclip_defaults = {
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV["AWS_BUCKET"],
+    access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+    secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
+  },
+  url: ":s3_domain_url",
+  path: "/:class/:attachment/:id_partition/:style/:filename"
+}
+```
 
 With those configuration variables created on Heroku now...
 
